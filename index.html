@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Varahi OVerseas Consultancy</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    </head>
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    let currentPage = window.location.pathname.split("/").pop();
+    let navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    let dropdownItems = document.querySelectorAll(".dropdown-item");
+
+    // Highlight normal nav links
+    navLinks.forEach(link => {
+        let linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+    // Highlight dropdown items + parent
+    dropdownItems.forEach(item => {
+        let itemPage = item.getAttribute("href");
+        if (itemPage === currentPage) {
+            item.classList.add("active");
+
+            // highlight Study Abroad also
+            let parentDropdown = item.closest(".dropdown");
+            if (parentDropdown) {
+                parentDropdown.querySelector(".nav-link").classList.add("active");
+            }
+        }
+    });
+
+});
+</script>
+
+
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+<!-- Topbar Start -->
+<div class="container-fluid topbar-custom px-5 d-none d-lg-block">
+    <div class="d-flex justify-content-between align-items-center topbar-content">
+
+        <!-- Left Info -->
+        <div class="d-flex align-items-center gap-4">
+             <span><i class="fas fa-envelope me-2"></i>varahioverseas8@gmail.com</span>
+            <span><i class="fas fa-envelope me-2"></i>Varahioverseasconsultant@gmail.com</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 8106169187</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 9030163109</span>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="d-flex align-items-center gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+        </div>
+
+    
+    </div>
+</div>
+<!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+           <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand d-flex align-items-center p-0">
+    <img src="./img/varahi (3).png" alt="Logo" class="logo-img me-2">
+    <h1 class="brand-name m-0">VARAHI</h1>
+</a>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="./index.html" class="nav-item nav-link">Home</a>
+                        <a href="./aboutus.html" class="nav-item nav-link">About Us</a>
+                         <a href="./ourservices.html" class="nav-item nav-link">Services</a>
+                         <div class="nav-item dropdown">
+                            <a href="./studyaboard.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Study Aboard</span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href="./contriespages/ukpage.html" class="dropdown-item">UK</a>
+                                <a href="./contriespages/usapage.html" class="dropdown-item">Usa</a>
+                            <a href="./contriespages/canadapage.html" class="dropdown-item">Canada</a>
+                            <a href="./contriespages/germanypage.html" class="dropdown-item">Germany</a>
+                       <a href="./contriespages/austrilapage.html" class="dropdown-item">Australia</a>
+                       <a href="./contriespages/newzelandpage.html" class="dropdown-item">Newzealand</a> 
+                        <a href="./contriespages/irelandpage.html" class="dropdown-item">Ireland</a>
+                    <a href="./contriespages/Singapore.html" class="dropdown-item">Singapore</a>
+                <a href="./contriespages/France.html" class="dropdown-item">France</a>
+            <a href="./contriespages/netherlands.html" class="dropdown-item">Netherlands</a></div> 
+                    </div>
+                        <a href="./careerpagenew.html" class="nav-item nav-link">Careers</a>
+                      <a href="./contactus.html" class="nav-item nav-link">Contact us </a>  
+                      <a href="./loginpage.html" class="nav-item nav-link">Login</a>
+                   
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+         <!-- Carousel Start -->
+<div class="carousel-header">
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators (5 Dots) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselId" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselId" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselId" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselId" data-bs-slide-to="4"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="./img/Slide.jpeg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <div class="carousel-text-box">
+    
+    <h4>Empowering Your Dreams</h4>
+    <p>
+        Empowering students to reach their global dreams. At Varahi, we provide the right guidance 
+        for your bright future and first step towards international education.
+    </p>
+</div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="./img/corosel 5.webp" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                   <div class="carousel-text-box">
+    
+    <h4>Education Without Borders</h4>
+    <p>
+        The world is your classroom. We simplify the complex process of international 
+        admissions and visas so you can focus on what matters--your flight to success.
+    </p>
+</div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="img/carousel-1.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <div class="carousel-text-box">
+    
+    <h4>Step to Your Future</h4>
+    <p>
+        Your journey doesn't end with an admission letter--it begins when you clear 
+        your visa and hold your passport. At Varahi, we ensure that the transition from 
+        your Home to your dream destination is seamless and stress-free.
+
+    </p>
+</div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="./img/courosel 1.png" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <div class="carousel-text-box">
+    
+    <h4>Fly High, Study Higher With Varahi</h4>
+    <p>
+        We simplify your journey from application to arrival, ensuring a smooth transition to 
+        your dream university. Whether it's the UK, USA or Canada, we provide the roadmap
+        to the world's most prestigious educational hubs.
+    </p>
+</div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+                <img src="./img/courosel 5.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                   <div class="carousel-text-box">
+    
+    <h4>High-Fives for a Brighter Future</h4>
+    <p>
+        There is no greater joy than seeing our students reach their goals. We celebrate 
+        every milestone with you--from your first consultation to the moment you walk across
+        the stage at your global graduation. 
+    </p>
+</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-secondary"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-secondary"></span>
+        </button>
+
+    </div>
+</div>
+<!-- Carousel End -->
+<!-- About Start -->
+<section class="about-section py-5">
+
+    <div class="container py-5">
+
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+            <!-- Moving Flag -->
+<!-- Moving Plane with Flag -->
+<div class="flag-wrapper">
+
+    <div class="plane-flag-group">
+
+        <!-- Airplane -->
+        <img src="./img/pngaaa.com-314808.png" class="plane-img" alt="plane">
+
+      
+
+    </div>
+
+</div>
+
+</div>      <h5 class="sub-title">About The Company</h5>
+            <h1 class="display-5 mt-3">
+                We’re Trusted Consultant Agent.
+            </h1>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+
+                <!-- Founder Message Box -->
+                <div class="founder-message-box p-5">
+
+                    <p class="founder-quote">
+                        “Success abroad isn't just about getting a visa—it's about
+                        choosing the right path, being fully prepared, and having
+                        someone who genuinely cares about your future guiding you
+                        every step of the way.”
+                    </p>
+
+               
+                    <h4 class="journey-title mt-4">
+                        Let's Start Your Journey Together
+                    </h4>
+
+                    
+                </div>
+
+                <!-- Features Section -->
+                <div class="row gy-4 mt-5">
+
+                    <div class="col-md-6">
+
+                        <div class="feature-box mb-4">
+                            <i class="fas fa-map-marked-alt text-brown fa-2x mb-3"></i>
+                            <h5>Best Trusted and Licensed Study Abroad Consultant</h5>
+                        </div>
+
+                      <div class="experience-box text-center p-4 mt-4">
+
+    <div class="varahi-wave">
+        <span>V</span>
+        <span>A</span>
+        <span>R</span>
+        <span>A</span>
+        <span>H</span>
+        <span>I</span>
+    </div>
+
+    <h1 class="fw-bold text-brown">14</h1>
+    <p>Years of Experience</p>
+
+</div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="checklist-box mb-4">
+                            <p><i class="fa fa-check-circle text-brown me-2"></i>Offer 100 % Genuine Assistance</p>
+                            <p><i class="fa fa-check-circle text-brown me-2"></i>Faster & Reliable Execution</p>
+                            <p><i class="fa fa-check-circle text-brown me-2"></i>Accurate & Expert Advice</p>
+                        </div>
+
+                        <div class="contact-box d-flex align-items-center mt-4">
+                            <i class="fa fa-phone-alt text-brown fa-2x me-3"></i>
+                            <div>
+                                <span>Have any questions?</span><br>
+                                <span class="fw-bold fs-5">Call: +91 8106169187</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- About End -->
+     <!-- Services Start -->
+<div class="container-fluid service overflow-hidden py-5"
+    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
+    url('back image 2.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+
+    <div class="container">
+        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="services-header">
+                <div class="small-title">
+                    <span class="line"></span>
+                    <h5>OUR SERVICES</h5>
+                    <span class="line"></span>
+                </div>
+                <h1 class="display-5 mb-2">Explore our services</h1>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- 1 -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp1.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/superconsuling.html" class="h4 text-white mb-0">super Counselling</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/superconsuling.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/superconsuling.html"><h4 class="text-white mb-4 py-3">super Counselling</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Personalized guidance, expert advice, and tailored solutions to help you achieve your dreams. Your success, our mission!</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/superconsuling.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp2.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Test Preparation.html" class="h4 text-white mb-0">Test Preparation</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Test Preparation.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Test Preparation.html"><h4 class="text-white mb-4 py-3">Test Preparation</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Comprehensive coaching for IELTS, TOEPL, PTE, GRE, GMAT, and other standardized tests required for overseas education</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Test Preparation.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp3.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Documentation.html" class="h4 text-white mb-0">Documentation</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Documentation.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Documentation.html"><h4 class="text-white mb-4 py-3">Documentation</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Professional assistance with SOP writing, LOR preparation, resume building, and complete document verification.</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Documentation.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMPTY COLUMN TO CENTER LAST TWO -->
+            <div class="col-xl-2 d-none d-xl-block"></div>
+
+            <!-- 4 Visa Processing -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp44.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Visa Processing.html" class="h4 text-white mb-0">Visa Processing</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Visa Processing.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Visa Processing.html"><h4 class="text-white mb-4 py-3">Visa Processing</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Unlock your potential and take the first step toward a brighter future! Complete this application to explore exciting opportunities tailored just for you.</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Visa Processing.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 Pre-Departure Briefing -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Pre-Departure Briefing.html" class="h4 text-white mb-0">Pre-Departure Briefing</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Pre-Departure Briefing.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Pre-Departure Briefing.html"><h4 class="text-white mb-4 py-3">Pre-Departure Briefing</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Complete guidance on accommodation, travel, culture, currency, and everthing you need to settle in your destination.</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Pre-Departure Briefing.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+             
+            
+             
+            
+                   
+    
+        <!-- Services End -->
+
+       <!-- Testimonial Start -->
+       
+<div class="container-fluid testimonial overflow-hidden py-5" 
+style="background-image: url('Travisa/img/img.jpeg') ;
+             background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;">
+    <div class="container">
+
+        <div class="section-title text-center mb-5 wow fadeInUp">
+            <div class="sub-style">
+    <h1 class="sub-title text-primary">TESTIMONIALS</h1>
+            
+</div>
+            <h5 class="mb-2">Real experiences from students who achieved their dreams</h5>
+        </div>
+
+        <div class="owl-carousel testimonial-carousel">
+
+            <!-- 1 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Nayeem Uddin</h5>
+                <small class="text-muted">a year ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>I am very satisfied with the support I received from this Varahi overseas consultant for my UK studies. They guided me step by step, clarified all doubts regarding universities and visa requirements, and provided timely updates. Mr Sanketan sir was professional and honest guidance gave me confidence.</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Bharath Simhareddy</h5>
+                <small class="text-muted">a year ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>I had a great experience with Varahi overseas consultant.They guided me smoothly through my entire process, and I’m really thankful for their support. A special appreciation to my consultant, Sanketan for his excellent guidance, patience, and clear explanations at every step. He made the whole journey stress-free.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Nizam uddin Mohammed</h5>
+                <small class="text-muted">a year ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>Successfully received my UK visa, Right from the first meeting, [Varahi Overseas Consultant] took time to understand my academic background, career aspirations, and preferred countries/universities. Special Thanks To Mr.Sanketan Sir he asked detailed questions rather than offering generic advice.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Shauk Shaikh</h5>
+                <small class="text-muted">a year ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>1 am incredibly grateful to Samketan sir
+and Varahi Overseas for their excellent guidance and support throughout my journey.
+
+Thanks to their expertise and dedicated assistance, I am now pursuing my Master's degree in the UK.
+Samketan sir provided me with clear direction at every step -  ❤️</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>OGCODMYT</h5>
+                <small class="text-muted">2 years ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>My experience was top notch with Sanketan sir
+He explained about my profile in detail and courses, universities selection and visa process was so clear, am so happy that i got UK visa❤️. Thank you so much sir for your motivation. i definitely recommend Varahi Overseas Consultant to students.</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Samudrala Priyanka</h5>
+                <small class="text-muted">1 year ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>Hello, I'm Priyanka and I've finally arrived in London❤️. Varahi Overseas Consultant has been incredibly friendly throughout my journey. They provided guidance and assistance every step of the way, helping me fulfill my dream of studying in UK. I am immensely grateful to the Varahi Overseas.</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Jathin Oni</h5>
+                <small class="text-muted">6 months ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>I Got My F1 Visa Approved. I Got To Know About Varahi Overseas❤️ Consultant through my friend. Sanketan sir and his team had held my hand from Day One And supported me with every single process. Am very happy to Chose this consultancy. Thank you for team</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Kranthi kumar Chowdary</h5>
+                <small class="text-muted">8 months ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>They were extremely helpful in guiding me through every step of the process. From selecting the right university to assisting with visa applications, it made my work easier i would recommend them any day. A special thanks to Ravi bro for being there right through the process.</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>kurakula Pravalika</h5>
+                <small class="text-muted">3 months ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>I got admitted to Jackson University, Florida, I met Sanketan sir. His knowledge and counselling was so detailly explained. This Consultancy helped me with everything❤️. I got into good University with very good Fee Structure. am so happy and i suggest student to contact sir. Thank you</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="testimonial-item bg-light p-4 rounded shadow-sm">
+                <h5>Sannidh Reddy</h5>
+                <small class="text-muted">4 months ago</small>
+                <div class="text-warning my-2">★★★★★</div>
+                <p>I am incredibly grateful to Samketan and Varahi Overseas for their excellent guidance and support throughout my journey. Thanks to their expertise and dedicated assistance❤️, I am now pursuing my Master’s degree in the UK.
+
+Samketan provided me with clear direction at every step.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+ <!-- Contact Start -->
+        <div class="container-fluid contact overflow-hidden py-5"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('back image 2.jpeg') ;
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;">
+
+
+            <div class="container pb-5">
+                <div class="office">
+                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                      <div class="sub-style">
+                         <span class="line"></span>
+    <h5 class="sub-title">Know</h5>
+     <span class="line"></span>
+</div>
+                        <div class="process">
+                        <h1 class="display-5 mb-4" style="color: #ffc107;">Our Process</h1></div>
+
+                        
+                    </div>
+                    <div class="process-wrapper">
+
+    <div class="process-item">
+        <div class="process-circle">
+            <img src="./img/ph111.jpeg" alt="">
+        </div>
+        <h5>1</h5>
+        <p>Expert Counselling</p>
+    </div>
+
+    <div class="process-item">
+        <div class="process-circle">
+            <img src="./img/ph22.jpeg" alt="">
+        </div>
+        <h5>2</h5>
+        <p>University Shortlisted</p>
+    </div>
+
+    <div class="process-item">
+        <div class="process-circle">
+            <img src="./img/ph2.jpeg" alt="">
+        </div>
+        <h5>3</h5>
+        <p>University Application</p>
+    </div>
+
+    <div class="process-item">
+        <div class="process-circle">
+            <img src="./img/ph3.jpeg" alt="">
+        </div>
+        <h5>4</h5>
+        <p>Finding Guidance</p>
+    </div>
+
+    <div class="process-item">
+        <div class="process-circle">
+            <img src="./img/ph4.jpeg" alt="">
+        </div>
+        <h5>5</h5>
+        <p>Visa Process</p>
+    </div>
+
+    <div class="process-item">
+        <div class="process-circle">
+            <img src="./img/ph7.jpeg" alt="">
+        </div>
+        <h5>6</h5>
+        <p>Pre-Departure Support</p>
+    </div>
+
+</div>    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+ <!-- LEFT CONTENT -->
+    <section class="why-choose">
+        <h3>Why Choose Varahi Overseas Consultant?</h3>
+        <ul>
+
+        <li>
+            <strong>Expert Counselors: </strong>
+            Our team consists of certified professionals with extensive
+            experience in international education and immigration.
+        </li>
+
+        <li>
+            <strong>Global Network: </strong>
+            We have partnership with an university and with the Indian agents.
+        </li>
+
+        <li>
+            <strong>High Success Rate: </strong>
+            Hundreds of successful University admissions and Visa approval.
+        </li>
+
+        <li>
+            <strong>End-to-End Service: </strong>
+            From career counseling to post-landing support, we handle every
+            aspect of your overseas journey.
+        </li>
+       
+        <li>
+            <strong>Country Selection Support:</strong>
+            We help you choose the best country for your education based on budget, career
+            scope, and visa policies.
+        </li>
+
+        <li>
+            <strong>Ethical Practices: </strong>
+            We believe in honest guidance and never make false promises or
+            mislead our clients.
+        </li>
+       
+           <li>
+            <strong>Quick Application Process: </strong>
+            Our streamlined process ensures faster university applications and timely
+             updates.
+           </li>
+
+            <li>
+            <strong>Fast & Reliable Documentation Support: </strong>
+            Our team helps prepare and verify all documents correctly to avoid delays and 
+            rejections.
+            </li>
+
+           <li>
+            <strong>Affordable & Student-friendly Services: </strong>
+             Our consultancy offers high-quality services at reasonable costs.
+           </li>
+
+           <li>
+            <strong>Long-term Career Support: </strong>
+            We guide students not only for admissions but also for future career oppurtunities
+             abroad.
+            </li>
+        </ul>
+    </section>
+
+
+
+<section class="section">
+
+    <div class="section-title">
+        <span class="line"></span>
+        <h5>Study Destination</h5>
+        <span class="line"></span>
+    </div>
+
+    <h2>Top Countries we Serve</h2>
+    <p>We help you reach the worlds's leading education destionations.</p>
+
+    <div class="flags-container">
+
+        <div class="flag-card">
+              <a href="./contriespages/usapage.html">
+            <img src="./img/us.jpg" alt="">
+            <span>United States</span></a>
+           
+        </div>
+
+        <div class="flag-card">
+           <a href="./contriespages/ukpage.html">
+            <img src="./img/Uk.jpg" alt="">
+            <span>United Kingdom</span>
+        </div></a>  
+
+        <div class="flag-card">
+            <a href="./contriespages/canadapage.html">
+            <img src="./img/vecteezy_canada-flag-vector_.jpg" alt="">
+            <span>Canada</span>
+        </div></a>
+
+        <div class="flag-card">
+            <a href="./contriespages/austrilapage.html">
+            <img src="./img/Austrila.jpg" alt="">
+            <span>Australia</span>
+        </div></a>
+
+        <div class="flag-card">
+            <a href="./contriespages/germanypage.html">
+            <img src="./img/Germany.jpg" alt="">
+            <span>Germany</span>
+        </div></a>
+
+        <div class="flag-card">
+            <a href="./contriespages/newzelandpage.html">
+            <img src="./img/new zealand.jpg" alt="">
+            <span>New Zealand</span>
+        </div></a>
+
+        <div class="flag-card">
+            <a href="./contriespages/irelandpage.html">
+            <img src="./img/ireland.jpg" alt="">
+            <span>Ireland</span>
+        </div></a>
+
+  <div class="flag-card">
+    <a href="./contriespages/Singapore.html">
+            <img src="./img/singapore.jpg" alt="">
+            <span>Singapore</span>
+        </div></a>
+
+         <div class="flag-card">
+            <a href="./contriespages/France.html">
+            <img src="./img/france.jpg" alt="">
+            <span>France</span>
+        </div></a>
+
+         <div class="flag-card">
+            <a href="./contriespages/netherlands.html">
+            <img src="./img/netharland.jpg" alt="">
+            <span>Netherlands</span>
+        </div></a>
+    </div>
+</section><!-- COUNSELLING SECTION START -->
+
+<div id="counselling-container">
+    <section class="counselling-section">
+        <!-- LEFT SIDE FORM -->
+        <div class="counselling-form">
+
+            <div class="logo">Varahi Overseas</div>
+            <h2>Get FREE Counselling Today!</h2>
+
+            <div class="steps">
+                <div class="step active">1</div>
+                <div class="line"></div>
+                <div class="step">2</div>
+                <div class="line"></div>
+                <div class="step">3</div>
+                <div class="line"></div>
+                <div class="step">4</div>
+                <div class="line"></div>
+                <div class="step">5</div>
+                <div class="line"></div>
+                <div class="step">6</div>
+            </div>
+
+            <form id="multiStepForm">
+
+             <!-- STEP 1 -->
+        <div class="form-step active">
+          <label>Your preferred study destination</label>
+          <select>
+            <option>Germany</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>UK</option>
+            <option>Austrila</option>
+            <option>Newzealand</option>
+            <option>Ireland</option>
+            <option>Singapore</option>
+            <option>France</option>
+            <option>Netharlands</option>
+          </select>
+
+          <label>What do you wish to pursue?</label>
+          <select>
+            <option>Diploma</option>
+              <option>Bachelor’s Degree</option>
+             <option>Master’s Degree</option>  
+              <option>PG</option>  
+            <option>PHD</option>
+             <option>Others</option>
+          </select>
+
+          <button type="button" class="next">Next</button>
+        </div>
+
+        <!-- STEP 2 -->
+   <!-- STEP 2 -->
+        <div class="form-step">
+            <label>When do you plan to study?</label>
+            <select>
+                <option>Jan 2026</option>
+                <option>May 2026</option>
+                <option>Sep 2026</option>
+                <option>Jan 2027</option>
+                <option>May 2027</option>
+                <option>Sep 2027</option>
+                <option>Jan 2028</option>
+                <option>May 2028</option>
+                <option>Sep 2028</option>
+                
+            </select>
+            
+       
+
+          <label>Do you have a valid passport?</label>
+          <select>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
+          <div class="btn-group">
+            <button type="button" class="prev">Previous</button>
+            <button type="button" class="next">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="form-step">
+          <label>IELTS/TOEFL Status</label>
+          <select>
+            <option>Not Decided</option>
+            <option>Completed</option>
+          </select>
+
+          <label>Score</label>
+          <input type="text">
+
+          <div class="btn-group">
+            <button type="button" class="prev">Previous</button>
+            <button type="button" class="next">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="form-step">
+          <label>Do you require Loan?</label>
+          <select>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
+          <label>Preferred mode of counselling</label>
+          <select>
+            <option>Online</option>
+            <option>Offline</option>
+          </select>
+
+          <div class="btn-group">
+            <button type="button" class="prev">Previous</button>
+            <button type="button" class="next">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="form-step">
+          <label>Name</label>
+          <input type="text">
+
+          <label>Phone</label>
+          <input type="text">
+
+          <div class="btn-group">
+            <button type="button" class="prev">Previous</button>
+            <button type="button" class="next">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="form-step">
+          <label>Email</label>
+          <input type="email">
+
+          <div class="btn-group">
+            <button type="button" class="prev">Previous</button>
+            <button type="submit">Send</button>
+          </div>
+        </div>        <!-- RIGHT SIDE IMAGE -->
+        <div class="counselling-image"></div>
+
+    </div>
+</section>
+</div>
+<!-- COUNSELLING SECTION END -->
+ <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                   <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Contact Info</h4>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>JB Residency, Plot No.203, 2nd Floor, Maruthi Nagar, A.S.Rao Nagar,Hyd-62</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> Varahioverseasconsultant@gmail.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 9030163109</a>
+                             <a href=""><i class="fas fa-phone me-2"></i> +91 8106169187</a>
+                             <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-warning me-2"></i>
+                                <a class="btn mx-1" href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn mx-1" href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Opening Time</h4>
+                            <div class="mb-3">
+                               <h6 class="mb-0" style="color: gray;">Mon - Sat:</h6>
+                                <p class="text-white mb-0"> 9:30 AM - 6:30 PM</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="mb-0" style="color: grey;">Vacation:</h6>
+                                <p class="text-white mb-0">All Sunday is our vacation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Our Services</h4>
+                            <a href="./ourservices/superconsuling.html" class=""><i class="fas fa-angle-right me-2"></i> Super Counseling</a>
+                             <a href="./ourservices/Test Preparation.html" class=""><i class="fas fa-angle-right me-2"></i> Test Preparation</a>
+                              <a href="./ourservices/Documentation.html" class=""><i class="fas fa-angle-right me-2"></i> Documentation</a>
+                            <a href="./ourservices/Visa Processing.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Processing</a>
+                            <a href="./ourservices/Pre-Departure Briefing.html" class=""><i class="fas fa-angle-right me-2"></i> Pre-Departure Briefing</a>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4" style="background-color: #3e2723;">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Varahi Overseas Consultant</a>, All right reserved.</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    <!-- Copyright End -->
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+      <!-- Bootstrap JS (if you have) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom script -->
+    <script>
+    document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+        window.location.href = this.getAttribute('href');
+    });
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const steps = document.querySelectorAll(".step");
+    const lines = document.querySelectorAll(".line");
+    const formSteps = document.querySelectorAll(".form-step");
+    const nextBtns = document.querySelectorAll(".next");
+
+    let currentStep = 0;
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            if (currentStep < formSteps.length - 1) {
+                formSteps[currentStep].classList.remove("active");
+                steps[currentStep].classList.remove("active");
+
+                lines[currentStep].classList.add("active");
+
+                currentStep++;
+
+                formSteps[currentStep].classList.add("active");
+                steps[currentStep].classList.add("active");
+            }
+        });
+    });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const formSteps = document.querySelectorAll(".form-step");
+    const stepIndicators = document.querySelectorAll(".steps .step");
+    const nextBtns = document.querySelectorAll(".next");
+    const prevBtns = document.querySelectorAll(".prev");
+
+    let currentStep = 0;
+
+    function updateForm() {
+        // Hide all steps
+        formSteps.forEach(step => step.classList.remove("active"));
+
+        // Remove active from all indicators
+        stepIndicators.forEach(step => step.classList.remove("active"));
+
+        // Show current step
+        formSteps[currentStep].classList.add("active");
+
+        // Highlight current indicator
+        if (stepIndicators[currentStep]) {
+            stepIndicators[currentStep].classList.add("active");
+        }
+    }
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener("click", function () {
+            if (currentStep < formSteps.length - 1) {
+                currentStep++;
+                updateForm();
+            }
+        });
+    });
+
+    prevBtns.forEach(btn => {
+        btn.addEventListener("click", function () {
+            if (currentStep > 0) {
+                currentStep--;
+                updateForm();
+            }
+        });
+    });
+
+});
+</script>
+</body>
+</html>
+  

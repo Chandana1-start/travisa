@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    background:url("world.jpg")no-repeat center center/cover;
+
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+   
+    position: relative;
+
+}
+
+/* Blur Layer */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.overlay {
+   
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.modal {
+    width: 42%;
+    margin: 0 80px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 180px;
+    
+}
+.form-box{
+    width: 90%;
+    
+}
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step.active {
+    background: brown;
+    color: white;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+.image-section{
+    width: 40%;
+
+}
+
+.image-section img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.main-container {
+display: flex;
+height: 100vh;
+
+}

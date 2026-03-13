@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Careers Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#4e5b33;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.header-btn{
+    background:#ff5c35;
+    color:white;
+    padding:10px 22px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.header-btn:hover{
+    background:brown;
+    transform:translateY(-2px);
+}
+
+/* HERO SECTION WITH BACKGROUND IMAGE */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:200px ;
+    
+    background-image:url("./img/career.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+    color:white;
+}
+
+/* DARK OVERLAY */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.1);
+}
+
+/* Ensure content is above overlay */
+.hero-left,
+.hero-right{
+    position:relative;
+    z-index:1;
+}
+
+.hero-left{
+    width:50%;
+}
+
+.hero-left h1{
+    font-size:52px;
+    margin-bottom:25px;
+}
+
+.hero-left p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.main-btn{
+    background:brown;
+    color:white;
+    padding:16px 32px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.main-btn:hover{
+    background:brown;
+    transform:translateY(-3px);
+}
+
+/* IMAGE GRID */
+.hero-right{
+    width:45%;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+}
+
+.hero-right img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.hero-right img:hover{
+    transform:scale(1.07);
+}
+
+/*** Footer Start ***/
+.footer {
+    background-color: #6b3e26;   /* Brown color */
+    color: white;
+    
+}
+.footer .footer-item a {
+    line-height: 30px;
+    color: #fcfcfc;
+    transition: 0.5s;
+}
+
+.footer .footer-item p {
+    line-height: 30px;
+}
+
+.footer .footer-item a:hover {
+    letter-spacing: 2px;
+    color: #ffc107;   /* Yellow color */
+}
+.footer {
+    margin: 0;
+}
+
+.footer .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer h4,
+.footer p,
+.footer a {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin: 0;
+}
+/* Signup Button Hover */
+.footer .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.footer .btn-warning:hover {
+    background-color:#e0a800;   /* Darker yellow */
+    border-color: #e0a800;
+    color: #fff;                 /* White text on hover */
+    transform: scale(1.05);      /* Slight zoom effect */
+}
+/*** Footer End ***/
+
+
+/*** copyright Start ***/
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color:#3e2723;
+    display: inline-flex;
+    margin: 0px;
+}
+/*** copyright end ***/
+.h1{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 42px;
+    color: brown;
+}
+.para{
+    margin-top: 20px;
+    text-align: center;
+}
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-left, .hero-right{
+        width:100%;
+    }
+    .hero-right{
+        margin-top:0px;
+        margin-bottom: 50px;
+    }
+
+    .hero-left h1{
+        font-size:30px;
+        text-align: center;
+    }
+
+    
+
+    .career-top {
+        font-size:120px;
+        color: brown;
+        text-align: center;
+    }
+}
+.career{
+    text-align: center;
+    color: brown;
+    font-size: 35px;
+   font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Spinner Start */
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+/* Spinner End */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/* Button Start */
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+}
+
+.btn.btn-primary {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.btn.btn.btn-primary:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    color: var(--bs-secondary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn.btn-secondary:hover {
+    color: var(--bs-primary) !important;
+}
+
+
+/* Section Title Start */
+.section-title {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-title .sub-style {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.section-title .sub-style::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-bottom: -6px;
+    margin-left: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.section-title .sub-style::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -8px;
+    margin-left: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.sub-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.sub-title::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: -8px;
+    margin-right: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.sub-title::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: -6px;
+    margin-right: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+/* Smooth transition for everything */
+.topbar-content span,
+.topbar-content a,
+.topbar-content i {
+    transition: all 0.3s ease;
+}
+
+/* Contact text hover */
+.topbar-content span:hover {
+    color: #f8c471;   /* Light gold */
+    transform: translateY(-2px);
+}
+
+/* Social icon hover effect */
+.topbar-content a {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topbar-content a:hover {
+    color: #f8c471;
+    transform: translateY(-4px) scale(1.2);
+}
+
+/* Icon bounce animation */
+.topbar-content a:hover i {
+    animation: bounce 0.5s ease;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-6px); }
+    60%  { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional glow effect */
+.topbar-content a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.topbar-custom {
+    background-color: brown;
+    color: white; /* keeps text visible */
+}
+
+.topbar-custom a {
+    color: white;
+}
+
+.topbar-custom a:hover {
+    color: #f8c471; /* optional hover color */
+}/* Navbar */
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 30px 0;
+    color: var(--bs-primary) !important;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--bs-primary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+   color: brown !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-secondary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        position: relative;
+        background: var(--bs-white);
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px 20px;
+        border: 1px solid var(--bs-primary) !important;
+        color: var(--bs-primary);
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--bs-dark) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .sticky-top .navbar-light {
+        background: var(--bs-light) !important;
+    }
+
+    /* Top and Bottom borders go out */
+    .navbar-light .navbar-nav .nav-link:after,
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        top: 30px;
+        bottom: 30px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--bs-primary);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:before {
+        bottom: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:after {
+        top: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover:before,
+    .navbar-light .navbar-nav .nav-link.active:before {
+        top: 20px;
+        opacity: 1;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::after,
+    .navbar-light .navbar-nav .nav-link.active::after {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+#searchModal .modal-content {
+    background: rgba(118, 120, 123, 0.5);
+}
+:root {
+    --bs-primary: #0b2c4d;      /* Dark Blue (menu color) */
+    --bs-secondary: #d6336c;    /* Pink/Red (active & hover text) */
+    --bs-light: #ffffff;        /* White background */
+    --bs-dark: #0b2c4d;         /* Dark blue */
+    --bs-white: #ffffff;
+}
+/* VARAHI Brand Styling */
+
+.brand-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 2px;
+color: #c2185b;   /* Same pink color */
+    margin: 0;
+    
+}
+
+
+.vm-box {
+    margin-bottom: 80px;
+}
+
+.vm-box h3 {
+    color: brown;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vm-box h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.vm-box p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+blockquote {
+    margin-top: 20px;
+    font-style: italic;
+    color: brown;
+    font-weight: 600;
+}
+
+/* Mission Cards */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mission-card {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.mission-card i {
+    font-size: 28px;
+    color: brown;
+    margin-bottom: 15px;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    background: #fff0ea;
+}
+
+/* Values */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    padding: 30px;
+    border-radius: 12px;
+    background: #f8f8f8;
+    transition: 0.4s;
+}
+
+.value-card i {
+    font-size: 30px;
+    color: brown;
+    margin-bottom: 10px;
+}
+
+.value-card:hover {
+    transform: scale(1.05);
+    background: #fff0ea;
+}
+
+/* Animations */
+.fade-up {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Commitment Box */
+.commitment-box {
+    margin-top: 60px;
+    padding: 40px;
+    background: #fff0ea;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeUp 1s ease forwards;
+}
+
+.commitment-box h4 {
+    font-weight: 700;
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.commitment-box p {
+    max-width: 850px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+.highlight-text {
+    font-style: italic;
+    font-weight: 600;
+    color: brown;
+}
+
+.tagline {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    color: brown;
+}
+
+
+/* Optional: improve text visibility without black layer */
+
+
+.vision-only-bg p,
+.vision-only-bg blockquote
+ {
+    color: #000000; /* change if image is light */
+}
+.vision-only-bg h3,
+.vision-only-bg h4,
+.vision-only-bg blockquote{
+    color: brown;
+}
+.vision-only-bg p{
+    font-weight: 600px;
+}
+.vision-only-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('img/vision-bg.jpg') center/cover no-repeat; /* change image */
+    filter: blur(8px);
+    transform: scale(1.1); /* prevents blur edges */
+    z-index: -1;
+}
+.dropdown .dropdown-menu a:hover {
+    background: brown;
+    color: yellow;
+}
+
+/* Mouse Hover Interactive Effect */
+.varahi-animated:hover {
+    letter-spacing: 8px;
+    transform: scale(1.1);
+    text-shadow: 0 10px 20px rgba(139, 94, 60, 0.4);
+}
+.brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    /* Powerful Gradient */
+    background: linear-gradient(90deg, #5a3a1b, #8b5e3c, #c59d5f, #8b5e3c);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    transition: all 0.4s ease;
+}
+
+/* Strong Hover Effect */
+.brand-name:hover {
+    letter-spacing: 10px;
+    transform: scale(1.05);
+}
+.brand-name:hover {
+    letter-spacing: 10px;
+    transform: scale(1.05);
+    text-shadow: 0 5px 20px rgba(197, 157, 95, 0.4);
+}
+
+
+/* Spinner Start */
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+/* Spinner End */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/* Button Start */
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+}
+
+.btn.btn-primary {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.btn.btn.btn-primary:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    color: var(--bs-secondary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn.btn-secondary:hover {
+    color: var(--bs-primary) !important;
+}
+
+
+/* Section Title Start */
+.section-title {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-title .sub-style {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.section-title .sub-style::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-bottom: -6px;
+    margin-left: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.section-title .sub-style::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -8px;
+    margin-left: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.sub-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.sub-title::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: -8px;
+    margin-right: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.sub-title::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: -6px;
+    margin-right: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+/* Smooth transition for everything */
+.topbar-content span,
+.topbar-content a,
+.topbar-content i {
+    transition: all 0.3s ease;
+}
+
+/* Contact text hover */
+.topbar-content span:hover {
+    color: #f8c471;   /* Light gold */
+    transform: translateY(-2px);
+}
+
+/* Social icon hover effect */
+.topbar-content a {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topbar-content a:hover {
+    color: #f8c471;
+    transform: translateY(-4px) scale(1.2);
+}
+
+/* Icon bounce animation */
+.topbar-content a:hover i {
+    animation: bounce 0.5s ease;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-6px); }
+    60%  { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional glow effect */
+.topbar-content a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.topbar-custom {
+    background-color: brown;
+    color: white; /* keeps text visible */
+}
+
+.topbar-custom a {
+    color: white;
+}
+
+.topbar-custom a:hover {
+    color: #f8c471; /* optional hover color */
+}/* Navbar */
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 30px 0;
+    color: var(--bs-primary) !important;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--bs-primary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: brown !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-secondary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        position: relative;
+        background: var(--bs-white);
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px 20px;
+        border: 1px solid var(--bs-primary) !important;
+        color: var(--bs-primary);
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--bs-dark) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .sticky-top .navbar-light {
+        background: var(--bs-light) !important;
+    }
+
+    /* Top and Bottom borders go out */
+    .navbar-light .navbar-nav .nav-link:after,
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        top: 30px;
+        bottom: 30px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--bs-primary);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:before {
+        bottom: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:after {
+        top: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover:before,
+    .navbar-light .navbar-nav .nav-link.active:before {
+        top: 20px;
+        opacity: 1;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::after,
+    .navbar-light .navbar-nav .nav-link.active::after {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+#searchModal .modal-content {
+    background: rgba(118, 120, 123, 0.5);
+}
+:root {
+    --bs-primary: #0b2c4d;      /* Dark Blue (menu color) */
+    --bs-secondary: #d6336c;    /* Pink/Red (active & hover text) */
+    --bs-light: #ffffff;        /* White background */
+    --bs-dark: #0b2c4d;         /* Dark blue */
+    --bs-white: #ffffff;
+}
+/* VARAHI Brand Styling */
+
+
+/* Navbar End */
+.dropdown .dropdown-menu a:hover {
+    background: brown;
+    color: yellow;
+}
+
+/* Mouse Hover Interactive Effect */
+.varahi-animated:hover {
+    letter-spacing: 8px;
+    transform: scale(1.1);
+    text-shadow: 0 10px 20px rgba(139, 94, 60, 0.4);
+}
+.brand-name{
+    background: linear-gradient(90deg,#6a11cb,#ff4e50,#f9d423);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.brand-name{
+    font-family: 'Cinzel', serif;
+    font-size: 46px;
+     font-weight: 900;   /* Makes text very bold */
+    letter-spacing: 4px;
+}
+
+@keyframes goldshine{
+    to{
+        background-position: 200% center;
+    }
+}
+
+.logo-img{
+    height:400px;
+    width:auto;
+}
+
+
+.job-form{
+width:420px;
+padding:30px;
+border-radius:10px;
+margin:80px auto;   /* CENTER FORM */
+
+position:relative;
+overflow:hidden;
+background:rgba(255,255,255,0.85);
+border:1px solid #ccc;
+}
+
+.job-form{
+width:420px;
+padding:30px;
+border-radius:10px;
+background:white;
+border:1px solid #ccc;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.job-form label{
+font-weight:600;
+display:block;
+margin-top:10px;
+}
+.career-form-section{
+    background:url("./img/formback.jpeg") center/cover no-repeat;
+    padding:40px 0;   /* small space only */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.job-form input,
+.job-form textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+.form-buttons{
+margin-top:15px;
+display:flex;
+gap:10px;
+}
+
+.submit-btn{
+background:#007bff;
+color:white;
+padding:8px 18px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
+
+.reset-btn{
+background:#6c757d;
+color:white;
+padding:8px 18px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<!-- Topbar Start -->
+<div class="container-fluid topbar-custom px-5 d-none d-lg-block">
+    <div class="d-flex justify-content-between align-items-center topbar-content">
+
+        <!-- Left Info -->
+        <div class="d-flex align-items-center gap-4">
+             <span><i class="fas fa-envelope me-2"></i>varahioverseas8@gmail.com</span>
+            <span><i class="fas fa-envelope me-2"></i>Varahioverseasconsultant@gmail.com</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 8106169187</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 9030163109</span>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="d-flex align-items-center gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+</div>
+<!-- Topbar End -->
+
+       
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand d-flex align-items-center p-0">
+    <img src="./img/varahi (3).png" alt="Logo" class="logo-img me-2">
+    <h1 class="brand-name m-0">VARAHI</h1>
+</a>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="./index.html" class="nav-item nav-link">Home</a>
+                        <a href="./aboutus.html" class="nav-item nav-link">About Us</a>
+                         <a href="./ourservices.html" class="nav-item nav-link">Services</a>
+                         <div class="nav-item dropdown">
+                            <a href="./studyaboard.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Study Aboard</span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href="./contriespages/ukpage.html" class="dropdown-item">UK</a>
+                                <a href="./contriespages/usapage.html" class="dropdown-item">Usa</a>
+                            <a href="./contriespages/canadapage.html" class="dropdown-item">Canada</a>
+                            <a href="./contriespages/germanypage.html" class="dropdown-item">Germany</a>
+                       <a href="./contriespages/austrilapage.html" class="dropdown-item">Australia</a>
+                       <a href="./contriespages/newzelandpage.html" class="dropdown-item">Newzealand</a> 
+                        <a href="./contriespages/irelandpage.html" class="dropdown-item">Ireland</a>
+                    <a href="./contriespages/Singapore.html" class="dropdown-item">Singapore</a>
+                <a href="./contriespages/France.html" class="dropdown-item">France</a>
+            <a href="./contriespages/netherlands.html" class="dropdown-item">Netherlands</a></div> 
+                    </div>
+                        <a href="./careerpagenew.html" class="nav-item nav-link">Careers</a>
+                      <a href="./contactus.html" class="nav-item nav-link">Contact us </a>  
+                      <a href="./loginpage.html" class="nav-item nav-link">Login</a>
+                   
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+<!-- HEADER -->
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+    </section>
+    <div class="hero-left"></div>
+        </div>
+      
+       
+
+        </p>
+     </div>
+     <div class="career-top">
+        
+    
+        <p class=para>
+            
+            <a href="mailto:careers@varahioverseas.com">
+               
+            </a>
+        </p>
+    </div>
+
+    
+<section class="career-form-section">
+
+<form class="job-form" id="jobForm">
+
+<label>First Name</label>
+<input type="text" placeholder="Enter First Name" required>
+
+<label>Last Name</label>
+<input type="text" placeholder="Enter Last Name" required>
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter Phone Number" required>
+
+<label>Upload Resume</label>
+<input type="file" required>
+
+<div class="form-buttons">
+<button type="submit" class="submit-btn">Submit</button>
+<button type="reset" class="reset-btn">Reset</button>
+</div>
+
+</form>
+
+</section>
+
+<!-- VISION & MISSION SECTION END -->
+<!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                   <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Contact Info</h4>
+                                 <a href=""><i class="fa fa-map-marker-alt me-2"></i>JB Residency, Plot No.203, 2nd Floor, Maruthi Nagar, A.S.Rao Nagar,Hyd-62</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> Varahioverseasconsultant@gmail.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 9030163109</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 8106169187</a>
+                         <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-warning me-2"></i>
+                                <a class="btn mx-1" href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn mx-1" href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Opening Time</h4>
+                            <div class="mb-3">
+                               <h6 class="mb-0" style="color: gray;">Mon - Sat:</h6>
+                                <p class="text-white mb-0"> 9:30 AM - 6:30 PM</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="mb-0" style="color: grey;">Vacation:</h6>
+                                <p class="text-white mb-0">All Sunday is our vacation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Our Services</h4>
+                            <a href="./ourservices/superconsuling.html" class=""><i class="fas fa-angle-right me-2"></i> Super Counseling</a>
+                             <a href="./ourservices/Test Preparation.html" class=""><i class="fas fa-angle-right me-2"></i> Test Preparation</a>
+                              <a href="./ourservices/Documentation.html" class=""><i class="fas fa-angle-right me-2"></i> Documentation</a>
+                            <a href="./ourservices/Visa Processing.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Processing</a>
+                            <a href="./ourservices/Pre-Departure Briefing.html" class=""><i class="fas fa-angle-right me-2"></i> Pre-Departure Briefing</a>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Varahi Overseas Consultant</a>, All right reserved.</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+<script>
+document.getElementById("jobForm").addEventListener("submit", function(e){
+
+e.preventDefault(); // stop page reload
+
+alert("Form Submitted Successfully!");
+
+this.reset(); // clears all inputs including file upload
+
+});
+</script>
+
+</body>
+</html>

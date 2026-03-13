@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <title>our services</title>
+   
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* బాక్స్ మొత్తం లింక్ లా పనిచేయడానికి మరియు టెక్స్ట్ కలర్ మారకుండా ఉండటానికి */
+        .service-item-link {
+            display: block;
+            color: inherit;
+            text-decoration: none !important;
+        }
+        .service-item-link:hover {
+            color: inherit;
+        }
+     
+/* Footer Start */
+.footer {
+    background-color: #6b3e26;   /* Brown color */
+    color: white;
+    
+}
+.footer .footer-item a {
+    line-height: 30px;
+    color: #fcfcfc;
+    transition: 0.5s;
+}
+
+.footer .footer-item p {
+    line-height: 30px;
+}
+
+.footer .footer-item a:hover {
+    letter-spacing: 2px;
+    color: #ffc107;   /* Yellow color */
+}
+/* Signup Button Hover */
+.footer .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.footer .btn-warning:hover {
+    background-color:#e0a800;   /* Darker yellow */
+    border-color: #e0a800;
+    color: #fff;                 /* White text on hover */
+    transform: scale(1.05);      /* Slight zoom effect */
+}
+/*** Footer End ***/
+
+/* Footer End */
+
+
+/* copyright Start */
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color:#3e2723;
+    display: inline-flex;
+}
+/* copyright end */
+
+
+/* Spinner Start */
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+/* Spinner End */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/* Button Start */
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+}
+
+.btn.btn-primary {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.btn.btn.btn-primary:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    color: var(--bs-secondary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn.btn-secondary:hover {
+    color: var(--bs-primary) !important;
+}
+
+
+/* Section Title Start */
+.section-title {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-title .sub-style {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+
+.section-title .sub-style::before,
+.section-title .sub-style::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 3px;
+    transform: translateY(-50%);
+}
+
+/* Left Side Line */
+.section-title .sub-style::before {
+    left: 0;
+    background: var(--bs-secondary); /* pink line */
+}
+
+/* Right Side Line */
+.section-title .sub-style::after {
+    right: 0;
+    background: var(--bs-primary); /* blue line */
+}
+
+.sub-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.sub-title::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: -8px;
+    margin-right: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.sub-title::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: -6px;
+    margin-right: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+/* Smooth transition for everything */
+.topbar-content span,
+.topbar-content a,
+.topbar-content i {
+    transition: all 0.3s ease;
+}
+
+/* Contact text hover */
+.topbar-content span:hover {
+    color: #f8c471;   /* Light gold */
+    transform: translateY(-2px);
+}
+
+/* Social icon hover effect */
+.topbar-content a {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topbar-content a:hover {
+    color: #f8c471;
+    transform: translateY(-4px) scale(1.2);
+}
+
+/* Icon bounce animation */
+.topbar-content a:hover i {
+    animation: bounce 0.5s ease;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-6px); }
+    60%  { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional glow effect */
+.topbar-content a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.topbar-custom {
+    background-color: brown;
+    color: white; /* keeps text visible */
+}
+
+.topbar-custom a {
+    color: white;
+}
+
+.topbar-custom a:hover {
+    color: #f8c471; /* optional hover color */
+}/* Navbar */
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Cinzel', serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 30px 0;
+    color: var(--bs-primary) !important;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--bs-primary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: brown !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-secondary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        position: relative;
+        background: var(--bs-white);
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px 20px;
+        border: 1px solid var(--bs-primary) !important;
+        color: var(--bs-primary);
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--bs-dark) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .sticky-top .navbar-light {
+        background: var(--bs-light) !important;
+    }
+
+    /* Top and Bottom borders go out */
+    .navbar-light .navbar-nav .nav-link:after,
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        top: 30px;
+        bottom: 30px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--bs-primary);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:before {
+        bottom: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:after {
+        top: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover:before,
+    .navbar-light .navbar-nav .nav-link.active:before {
+        top: 20px;
+        opacity: 1;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::after,
+    .navbar-light .navbar-nav .nav-link.active::after {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+#searchModal .modal-content {
+    background: rgba(240, 245, 251, 0.5);
+}
+:root {
+    --bs-primary: #0b2c4d;      /* Dark Blue (menu color) */
+    --bs-secondary: brown;    /* Pink/Red (active & hover text) */
+    --bs-light: #ffffff;        /* White background */
+    --bs-dark: #0b2c4d;         /* Dark blue */
+    --bs-white: #ffffff;
+}
+.dropdown .dropdown-menu a:hover {
+    background: brown;
+    color: yellow;
+}
+/* Navbar End */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #ff4b2b, #1e3c72);
+}
+
+.section-title .title-text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Mouse Hover Interactive Effect */
+.varahi-animated:hover {
+    letter-spacing: 8px;
+    transform: scale(1.1);
+    text-shadow: 0 10px 20px rgba(139, 94, 60, 0.4);
+}
+.brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    /* Powerful Gradient */
+    background: linear-gradient(90deg, #5a3a1b, #8b5e3c, #c59d5f, #8b5e3c);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    transition: all 0.4s ease;
+}
+
+/* Strong Hover Effect */
+.brand-name:hover {
+    letter-spacing: 10px;
+    transform: scale(1.05);
+}
+.brand-name:hover {
+    letter-spacing: 10px;
+    transform: scale(1.05);
+    text-shadow: 0 5px 20px rgba(197, 157, 95, 0.4);
+}
+
+
+/* Spinner Start */
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+/* Spinner End */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/* Button Start */
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+}
+
+.btn.btn-primary {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.btn.btn.btn-primary:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    color: var(--bs-secondary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn.btn-secondary:hover {
+    color: var(--bs-primary) !important;
+}
+
+
+/* Section Title Start */
+.section-title {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-title .sub-style {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.section-title .sub-style::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-bottom: -6px;
+    margin-left: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.section-title .sub-style::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -8px;
+    margin-left: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.sub-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.sub-title::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: -8px;
+    margin-right: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.sub-title::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: -6px;
+    margin-right: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+/* Smooth transition for everything */
+.topbar-content span,
+.topbar-content a,
+.topbar-content i {
+    transition: all 0.3s ease;
+}
+
+/* Contact text hover */
+.topbar-content span:hover {
+    color: #f8c471;   /* Light gold */
+    transform: translateY(-2px);
+}
+
+/* Social icon hover effect */
+.topbar-content a {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topbar-content a:hover {
+    color: #f8c471;
+    transform: translateY(-4px) scale(1.2);
+}
+
+/* Icon bounce animation */
+.topbar-content a:hover i {
+    animation: bounce 0.5s ease;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-6px); }
+    60%  { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional glow effect */
+.topbar-content a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.topbar-custom {
+    background-color: brown;
+    color: white; /* keeps text visible */
+}
+
+.topbar-custom a {
+    color: white;
+}
+
+.topbar-custom a:hover {
+    color: #f8c471; /* optional hover color */
+}/* Navbar */
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 30px 0;
+    color: var(--bs-primary) !important;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--bs-primary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: brown !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-secondary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        position: relative;
+        background: var(--bs-white);
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px 20px;
+        border: 1px solid var(--bs-primary) !important;
+        color: var(--bs-primary);
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--bs-dark) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .sticky-top .navbar-light {
+        background: var(--bs-light) !important;
+    }
+
+    /* Top and Bottom borders go out */
+    .navbar-light .navbar-nav .nav-link:after,
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        top: 30px;
+        bottom: 30px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--bs-primary);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:before {
+        bottom: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:after {
+        top: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover:before,
+    .navbar-light .navbar-nav .nav-link.active:before {
+        top: 20px;
+        opacity: 1;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::after,
+    .navbar-light .navbar-nav .nav-link.active::after {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+#searchModal .modal-content {
+    background: rgba(118, 120, 123, 0.5);
+}
+:root {
+    --bs-primary: #0b2c4d;      /* Dark Blue (menu color) */
+    --bs-secondary: #d6336c;    /* Pink/Red (active & hover text) */
+    --bs-light: #ffffff;        /* White background */
+    --bs-dark: #0b2c4d;         /* Dark blue */
+    --bs-white: #ffffff;
+}
+/* VARAHI Brand Styling */
+
+
+/* Navbar End */
+.dropdown .dropdown-menu a:hover {
+    background: brown;
+    color: yellow;
+}
+
+/* Mouse Hover Interactive Effect */
+.varahi-animated:hover {
+    letter-spacing: 8px;
+    transform: scale(1.1);
+    text-shadow: 0 10px 20px rgba(139, 94, 60, 0.4);
+}
+.brand-name{
+    background: linear-gradient(90deg,#6a11cb,#ff4e50,#f9d423);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.brand-name{
+    font-family: 'Cinzel', serif;
+    font-size: 46px;
+     font-weight: 900;   /* Makes text very bold */
+    letter-spacing: 4px;
+}
+
+@keyframes goldshine{
+    to{
+        background-position: 200% center;
+    }
+}
+
+.logo-img{
+    height:400px;
+    width:auto;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<!-- Topbar Start -->
+<div class="container-fluid topbar-custom px-5 d-none d-lg-block">
+    <div class="d-flex justify-content-between align-items-center topbar-content">
+
+        <!-- Left Info -->
+        <div class="d-flex align-items-center gap-4">
+       <span><i class="fas fa-envelope me-2"></i>varahioverseas8@gmail.com</span>
+            <span><i class="fas fa-envelope me-2"></i>Varahioverseasconsultant@gmail.com</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 8106169187</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 9030163109</span>
+        </div>
+
+        <!-- Social Icons -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+</div>
+<!-- Topbar End -->
+
+       
+        <!-- Navbar & Hero Start -->
+       <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand d-flex align-items-center p-0">
+    <img src="./img/varahi (3).png" alt="Logo" class="logo-img me-2">
+    <h1 class="brand-name m-0">VARAHI</h1>
+</a>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="./index.html" class="nav-item nav-link">Home</a>
+                        <a href="./aboutus.html" class="nav-item nav-link">About Us</a>
+                         <a href="./ourservices.html" class="nav-item nav-link">Services</a>
+                         <div class="nav-item dropdown">
+                            <a href="./studyaboard.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Study Aboard</span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href="./contriespages/ukpage.html" class="dropdown-item">UK</a>
+                                <a href="./contriespages/usapage.html" class="dropdown-item">Usa</a>
+                            <a href="./contriespages/canadapage.html" class="dropdown-item">Canada</a>
+                            <a href="./contriespages/germanypage.html" class="dropdown-item">Germany</a>
+                       <a href="./contriespages/austrilapage.html" class="dropdown-item">Australia</a>
+                       <a href="./contriespages/newzelandpage.html" class="dropdown-item">Newzealand</a> 
+                        <a href="./contriespages/irelandpage.html" class="dropdown-item">Ireland</a>
+                    <a href="./contriespages/Singapore.html" class="dropdown-item">Singapore</a>
+                <a href="./contriespages/France.html" class="dropdown-item">France</a>
+            <a href="./contriespages/netherlands.html" class="dropdown-item">Netherlands</a></div> 
+                    </div>
+                        <a href="./careerpagenew.html" class="nav-item nav-link">Careers</a>
+                      <a href="./contactus.html" class="nav-item nav-link">Contact us </a>  
+                      <a href="./loginpage.html" class="nav-item nav-link">Login</a>
+                   
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+
+   <!-- Services Start -->
+<div class="container-fluid service overflow-hidden py-5"
+    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('back image 2.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+
+    <div class="container">
+        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="services-header">
+                <div class="small-title">
+                    <span class="line"></span>
+                    <h5>OUR SERVICES</h5>
+                    <span class="line"></span>
+                </div>
+                <h1 class="display-5 mb-2">Explore our services</h1>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- 1 -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp1.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/superconsuling.html" class="h4 text-white mb-0">super Counseling</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/superconsuling.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/superconsuling.html"><h4 class="text-white mb-4 py-3">super Counseling</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Personalized guidance, expert advice, and tailored solutions to help you achieve your dreams. Your success, our mission!</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/superconsuling.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp2.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Test Preparation.html" class="h4 text-white mb-0">Test Preparation</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Test Preparation.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Test Preparation.html"><h4 class="text-white mb-4 py-3">Test Preparation</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Comprehensive coaching for IELTS, TOEPL, PTE, GRE, GMAT, and other standardized tests required for overseas education</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Test Preparation.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp3.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Documentation.html" class="h4 text-white mb-0">Documentation</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Documentation.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Documentation.html"><h4 class="text-white mb-4 py-3">Documentation</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Professional assistance with SOP writing, LOR preparation, resume building, and complete document verification.</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Documentation.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMPTY COLUMN TO CENTER LAST TWO -->
+            <div class="col-xl-2 d-none d-xl-block"></div>
+
+            <!-- 4 Visa Processing -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp44.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Visa Processing.html" class="h4 text-white mb-0">Visa Processing</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Visa Processing.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Visa Processing.html"><h4 class="text-white mb-4 py-3">Visa Processing</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Unlock your potential and take the first step toward a brighter future! Complete this application to explore exciting opportunities tailored just for you.</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Visa Processing.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 Pre-Departure Briefing -->
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <div class="service-inner">
+                        <div class="service-img">
+                            <img src="./img/kp5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                        </div>
+                        <div class="service-title">
+                            <div class="service-title-name">
+                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                    <a href="./ourservices/Pre-Departure Briefing.html" class="h4 text-white mb-0">Pre-Departure Briefing</a>
+                                </div>
+                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="./ourservices/Pre-Departure Briefing.html">Explore More</a>
+                            </div>
+                            <div class="service-content pb-4">
+                                <a href="./ourservices/Pre-Departure Briefing.html"><h4 class="text-white mb-4 py-3">Pre-Departure Briefing</h4></a>
+                                <div class="px-4">
+                                    <p class="mb-4">Complete guidance on accommodation, travel, culture, currency, and everthing you need to settle in your destination.</p>
+                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="./ourservices/Pre-Departure Briefing.html">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+    <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                   <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Contact Info</h4>
+                              <a href=""><i class="fa fa-map-marker-alt me-2"></i>JB Residency, Plot No.203, 2nd Floor, Maruthi Nagar, A.S.Rao Nagar,Hyd-62</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> Varahioverseasconsultant@gmail.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 9030163109</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 8106169187</a>
+                       <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-warning me-2"></i>
+                                <a class="btn mx-1" href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn mx-1" href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Opening Time</h4>
+                            <div class="mb-3">
+                               <h6 class="mb-0" style="color: gray;">Mon - Sat:</h6>
+                                <p class="text-white mb-0"> 9:30 AM - 6:30 PM</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="mb-0" style="color: grey;">Vacation:</h6>
+                                <p class="text-white mb-0">All Sunday is our vacation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Our Services</h4>
+                            <a href="./ourservices/superconsuling.html" class=""><i class="fas fa-angle-right me-2"></i> Super Counseling</a>
+                             <a href="./ourservices/Test Preparation.html" class=""><i class="fas fa-angle-right me-2"></i> Test Preparation</a>
+                              <a href="./ourservices/Documentation.html" class=""><i class="fas fa-angle-right me-2"></i> Documentation</a>
+                            <a href="./ourservices/Visa Processing.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Processing</a>
+                            <a href="./ourservices/Pre-Departure Briefing.html" class=""><i class="fas fa-angle-right me-2"></i> Pre-Departure Briefing</a>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+       <div class="container-fluid copyright py-3">
+    <div class="container text-center">
+        <span class="text-white">
+            <i class="fas fa-copyright me-2"></i>
+            2026 Varahi Overseas Consultant. All Rights Reserved.
+        </span>
+    </div>
+</div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+ <!-- Bootstrap JS (if you have) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom script -->
+    <script>
+    document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+        window.location.href = this.getAttribute('href');
+    });
+    </script>
+
+</body>
+</html>
+  
+</body>
+</html>

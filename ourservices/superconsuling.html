@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>superconsuling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<link rel="stylesheet" href="contactus.css">
+<style>
+        :root {
+            --maroon-color: #800000; /* Maroon Color */
+            --light-bg: #f4f7f6;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Hero Banner Section */
+       .banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #333; /* Image load avvaka pothe black background kanipisthundi */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid var(--maroon-color);
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Matter clear ga kanipinchadaniki image ni light ga thagginchanu */
+}
+
+.banner-content {
+    z-index: 1; /* Matter image paina ravalante idhi undali */
+}
+        .banner h1 {
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Layout Container */
+        .wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* Left Sidebar Styling */
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .side-menu {
+            list-style: none;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .side-menu li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+
+        .side-menu li i {
+            margin-right: 12px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        /* Sidebar links default ga black lo undadaniki */
+.side-menu li a {
+    text-decoration: none;
+    color: #000000; /* Pure Black color */
+    display: block;
+    width: 100%;
+}
+
+/* Maroon (Brown) background unnappudu text white ga undadaniki */
+.side-menu li.active a, 
+.side-menu li:hover a {
+    color: #ffffff !important; /* White color */
+}
+
+/* Icon color kuda active unnappudu white avvadaniki */
+.side-menu li.active i,
+.side-menu li:hover i {
+    color: #ffffff !important;
+}
+
+        /* Maroon Color on Hover/Click */
+        .side-menu li:hover, .side-menu li.active {
+            background-color: var(--maroon-color);
+            color: #fff;
+        }
+
+        .side-menu li:hover i, .side-menu li.active i {
+            color: #fff;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .contact-card h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--maroon-color);
+            border-bottom: 2px solid var(--maroon-color);
+            display: inline-block;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .contact-info i {
+            color: var(--maroon-color);
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--maroon-color);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-main:hover {
+            background-color: #5a0000;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Styling */
+        .content-area {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+/* Heading and Vertical Line alignment */
+        .content-area h2 {
+            font-size: 36px;
+            
+            margin-bottom: 5px;
+            display: flex;          /* Line & Text side-by-side undaniki */
+            align-items: center;    /* Line text ki center lo undaniki */
+        }
+
+        .orange-line {
+            width: 5px;             /* Line sannam ga */
+            height: 40px;           /* Heading height ki thagattu */
+            background: var(--maroon-color);
+            margin-right: 15px;     /* Text ki line ki madhya gap */
+            display: inline-block;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            font-weight: 500;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin: 30px 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+            margin-left: 15px;
+        }
+
+        .item-block {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .item-block strong {
+            color: #222;
+        }
+
+        .conclusion-box {
+            margin-top: 40px;
+            padding: 25px;
+            background: #fff5f5;
+            border-left: 5px solid var(--maroon-color);
+            font-style: italic;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+        }
+
+ 
+/* Footer Start */
+.footer {
+    background-color: #6b3e26;   /* Brown color */
+    color: white;
+    
+}
+.footer .footer-item a {
+    line-height: 30px;
+    color: #fcfcfc;
+    transition: 0.5s;
+}
+
+.footer .footer-item p {
+    line-height: 30px;
+}
+
+.footer .footer-item a:hover {
+    letter-spacing: 2px;
+    color: #ffc107;   /* Yellow color */
+}
+
+/* Footer End */
+
+
+/* copyright Start */
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color:#3e2723;
+    display: inline-flex;
+}
+/* copyright end */
+
+
+
+
+/* Spinner Start */
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+/* Spinner End */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/* Button Start */
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+}
+
+.btn.btn-primary {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.btn.btn.btn-primary:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-secondary);
+    border: 1px solid var(--bs-secondary);
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    color: var(--bs-secondary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn.btn-secondary:hover {
+    color: var(--bs-primary) !important;
+}
+
+
+/* Section Title Start */
+.section-title {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-title .sub-style {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.section-title .sub-style::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-bottom: -6px;
+    margin-left: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.section-title .sub-style::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -8px;
+    margin-left: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.sub-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+}
+
+.sub-title::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: -8px;
+    margin-right: -100px;
+    border: 1px solid var(--bs-secondary) !important;
+}
+
+.sub-title::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: -6px;
+    margin-right: -50px;
+    border: 1px solid var(--bs-primary) !important;
+}
+/* Smooth transition for everything */
+.topbar-content span,
+.topbar-content a,
+.topbar-content i {
+    transition: all 0.3s ease;
+}
+
+/* Contact text hover */
+.topbar-content span:hover {
+    color: #f8c471;   /* Light gold */
+    transform: translateY(-2px);
+}
+
+/* Social icon hover effect */
+.topbar-content a {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topbar-content a:hover {
+    color: #f8c471;
+    transform: translateY(-4px) scale(1.2);
+}
+
+/* Icon bounce animation */
+.topbar-content a:hover i {
+    animation: bounce 0.5s ease;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-6px); }
+    60%  { transform: translateY(3px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional glow effect */
+.topbar-content a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+.topbar-custom {
+    background-color: brown;
+    color: white; /* keeps text visible */
+}
+
+.topbar-custom a {
+    color: white;
+}
+
+.topbar-custom a:hover {
+    color: #f8c471; /* optional hover color */
+}/* Navbar */
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 30px 0;
+    color: var(--bs-primary) !important;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--bs-primary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: brown !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top .navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-secondary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        position: relative;
+        background: var(--bs-white);
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px 20px;
+        border: 1px solid var(--bs-primary) !important;
+        color: var(--bs-primary);
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--bs-dark) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .sticky-top .navbar-light {
+        background: var(--bs-light) !important;
+    }
+
+    /* Top and Bottom borders go out */
+    .navbar-light .navbar-nav .nav-link:after,
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        top: 30px;
+        bottom: 30px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: var(--bs-primary);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:before {
+        bottom: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:after {
+        top: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover:before,
+    .navbar-light .navbar-nav .nav-link.active:before {
+        top: 20px;
+        opacity: 1;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::after,
+    .navbar-light .navbar-nav .nav-link.active::after {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+#searchModal .modal-content {
+    background: rgba(118, 120, 123, 0.5);
+}
+:root {
+    --bs-primary: #0b2c4d;      /* Dark Blue (menu color) */
+    --bs-secondary: #d6336c;    /* Pink/Red (active & hover text) */
+    --bs-light: #ffffff;        /* White background */
+    --bs-dark: #0b2c4d;         /* Dark blue */
+    --bs-white: #ffffff;
+}
+/* VARAHI Brand Styling */
+
+
+/* Navbar End */
+.dropdown .dropdown-menu a:hover {
+    background: brown;
+    color: yellow;
+}
+
+/* Mouse Hover Interactive Effect */
+.varahi-animated:hover {
+    letter-spacing: 8px;
+    transform: scale(1.1);
+    text-shadow: 0 10px 20px rgba(139, 94, 60, 0.4);
+}
+.brand-name{
+    background: linear-gradient(90deg,#6a11cb,#ff4e50,#f9d423);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.brand-name{
+    font-family: 'Cinzel', serif;
+    font-size: 46px;
+     font-weight: 900;   /* Makes text very bold */
+    letter-spacing: 4px;
+}
+
+@keyframes goldshine{
+    to{
+        background-position: 200% center;
+    }
+}
+
+.logo-img{
+    height:400px;
+    width:auto;
+}
+/* Heading Style */
+.content-area h2{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* Sub Headings */
+.content-area strong{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+/* Paragraph Text */
+.content-area p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* List Points */
+.content-area li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<!-- Topbar Start -->
+<div class="container-fluid topbar-custom px-5 d-none d-lg-block">
+    <div class="d-flex justify-content-between align-items-center topbar-content">
+
+        <!-- Left Info -->
+        <div class="d-flex align-items-center gap-4">
+          <span><i class="fas fa-envelope me-2"></i>varahioverseas8@gmail.com</span>
+            <span><i class="fas fa-envelope me-2"></i>Varahioverseasconsultant@gmail.com</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 8106169187</span>
+            <span><i class="fas fa-phone-alt me-2"></i>+91 9030163109</span>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="d-flex align-items-center gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+</div>
+<!-- Topbar End -->
+
+       
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand d-flex align-items-center p-0">
+    <img src="../img/varahi (3).png" alt="Logo" class="logo-img me-2">
+    <h1 class="brand-name m-0">VARAHI</h1>
+</a>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="../index.html" class="nav-item nav-link">Home</a>
+                        <a href="../aboutus.html" class="nav-item nav-link">About Us</a>
+                         <a href="../ourservices.html" class="nav-item nav-link">Services</a>
+                         <div class="nav-item dropdown">
+                            <a href="../studyaboard.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Study Aboard</span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href="../contriespages/ukpage.html" class="dropdown-item">UK</a>
+                                <a href="../contriespages/usapage.html" class="dropdown-item">Usa</a>
+                            <a href="../contriespages/canadapage.html" class="dropdown-item">Canada</a>
+                            <a href="../contriespages/germanypage.html" class="dropdown-item">Germany</a>
+                       <a href="../contriespages/austrilapage.html" class="dropdown-item">Australia</a>
+                       <a href="../contriespages/newzelandpage.html" class="dropdown-item">Newzealand</a> 
+                        <a href="../contriespages/irelandpage.html" class="dropdown-item">Ireland</a>
+                    <a href="../contriespages/Singapore.html" class="dropdown-item">Singapore</a>
+                <a href="../contriespages/France.html" class="dropdown-item">France</a>
+            <a href="../contriespages/netherlands.html" class="dropdown-item">Netherlands</a></div> 
+                    </div>
+                        <a href="../careerpagenew.html" class="nav-item nav-link">Careers</a>
+                      <a href="../contactus.html" class="nav-item nav-link">Contact us </a>  
+                      <a href="../loginpage.html" class="nav-item nav-link">Login</a>
+                   
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+    <div class="banner">
+    <img src="../img/consel.jpeg" alt="Banner Image">
+    
+    <div class="banner-content">
+        <h1>Super Counseling</h1>
+        
+    </div>
+</div>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+               <ul class="side-menu">
+<li class="active"><a href="./superconsuling.html"><i class="fa fa-chevron-right"></i> Super Counseling</a></li>
+    <li><a href="./Visa Processing.html"><i class="fa fa-chevron-right"></i> Visa Processing</a></li>
+    <li ><a href="./Test Preparation.html"><i class="fa fa-chevron-right"></i> Test Preparation</a></li>
+    <li><a href="./Documentation.html"><i class="fa fa-chevron-right"></i> Documentation Support</a></li>
+    <li ><a href="./Pre-Departure Briefing.html"><i class="fa fa-chevron-right"></i> Pre- Departure Briefing</a></li>
+  
+</ul>
+
+            <div class="contact-card">
+                <h3>Contact Us</h3>
+       <div class="contact-item"><i class="fa fa-location-dot"></i><span>JB Residency, Plot No.203, 2nd Floor, Maruthi Nagar, A.S.Rao Nagar,Hyd-62</span></div>
+                <div class="contact-item"><i class="fa fa-phone"></i><span>+91 9030163109</span></div>
+              <div class="contact-item"><i class="fa fa-phone"></i><span>+91 8106169187</span></div>  
+                <div class="contact-item"><i class="fa fa-envelope"></i><span>Varahioverseasconsultant@gmail.com</span></div>
+            </div>
+        </aside>
+
+   <main class="content-area">
+<h2><div class="orange-line"></div>Super Counseling</h2>
+<p class="tagline">Expert Guidance for Your Study Abroad Journey</p>
+
+<p><strong>Introduction:</strong><br>
+Super Counseling is the most important step in planning a successful study abroad journey. At Varahi Overseas Consultants, we provide personalized guidance to help students choose the right course, university, and country according to their academic background, interests, and career goals. Our experienced counselors understand that every student has different aspirations and requirements, so we provide customized support to ensure that students make the best decisions for their future.
+
+Our goal is to simplify the entire process of studying abroad and provide clear direction to students at every stage. From selecting the right university to successfully settling in a new country, our team provides continuous guidance and support.</p>
+
+<div class="section-header">Pre-Application Support</div>
+
+<div class="item-block">
+<p><strong>Career Guidance:</strong> Choosing the right career path is a crucial decision for students. Our counselors evaluate your academic strengths, interests, and long-term career goals to suggest suitable study programs and career opportunities.</p>
+</div>
+
+<div class="item-block">
+<p><strong>University and Course Selection:</strong> With thousands of universities available worldwide, selecting the right one can be confusing. Our team helps you shortlist the best universities and programs that match your academic qualifications, financial budget, and future career plans.</p>
+</div>
+
+<div class="item-block">
+<p><strong>Application and Documentation Assistance:</strong> Applying to international universities requires proper documentation and careful preparation. Our experts assist students in completing application forms, preparing academic documents, and submitting applications correctly before deadlines.</p>
+</div>
+
+<div class="item-block">
+<p><strong>Scholarship Guidance:</strong> Many universities offer scholarships and financial aid for international students. We guide students in identifying suitable scholarship opportunities and preparing strong applications that increase their chances of receiving financial support.</p>
+</div>
+
+<div class="section-header">Post-Application Support</div>
+
+<div class="item-block">
+<p><strong>Interview Preparation:</strong> Some universities and visa authorities require interviews as part of the admission process. We provide mock interview sessions and expert tips to help students confidently answer questions and present their goals effectively.</p>
+</div>
+
+<div class="item-block">
+<p><strong>Visa and Travel Guidance:</strong> Once students receive admission from universities, the next step is the visa process. Our team provides step-by-step guidance for visa applications, documentation, and travel arrangements so that students can begin their journey without stress.</p>
+</div>
+
+<div class="section-header">Post-Arrival Support</div>
+
+<div class="item-block">
+<p><strong>Smooth Transition:</strong> Moving to a new country can be challenging for many students. We guide students on adjusting to a new academic environment, culture, and lifestyle so they can comfortably settle into their new surroundings.</p>
+</div>
+
+<div class="item-block">
+<p><strong>Academic Success:</strong> Our counselors provide advice on managing coursework, communicating with professors, and maintaining good academic performance during their studies abroad.</p>
+</div>
+
+<div class="item-block">
+<p><strong>Personalized Guidance:</strong> Even after students reach their destination country, we continue to support them with advice and solutions whenever they face academic or personal challenges.</p>
+</div>
+
+<div class="section-header">Bridging the Gap</div>
+
+<div class="item-block">
+<p><strong>Seamless Integration:</strong> We help students bridge the gap between their home education system and the new international education system, ensuring a smooth academic transition.</p>
+</div>
+
+<div class="item-block">
+<p><strong>Customized Support:</strong> Our counseling sessions are tailored to meet the individual needs of each student, ensuring they receive the right support at the right time.</p>
+</div>
+
+<div class="conclusion-box">
+<strong>Conclusion:</strong><br>
+With Super Counseling at Varahi Overseas Consultants, students receive complete guidance from the beginning of their study abroad journey until they successfully achieve their academic goals. Our mission is to help students build a bright future through quality international education.
+</div>
+
+
+</main>
+    </div>
+
+    
+<!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                   <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Contact Info</h4>
+                                <a href=""><i class="fa fa-map-marker-alt me-2"></i>JB Residency, Plot No.203, 2nd Floor, Maruthi Nagar, A.S.Rao Nagar,Hyd-62</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> Varahioverseasconsultant@gmail.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 9030163109</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 8106169187</a>
+                        <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-warning me-2"></i>
+                                <a class="btn mx-1" href="https://www.facebook.com/profile.php?id=61566167397078"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn mx-1" href="https://www.instagram.com/varahi_overseas_consultant?igsh=MWZ6NWlrMm1xbzJ4ag=="><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Opening Time</h4>
+                            <div class="mb-3">
+                               <h6 class="mb-0" style="color: gray;">Mon - Sat:</h6>
+                                <p class="text-white mb-0"> 9:30 AM - 6:30 PM</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6 class="mb-0" style="color: grey;">Vacation:</h6>
+                                <p class="text-white mb-0">All Sunday is our vacation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-warning mb-4">Our Services</h4>
+                            <a href="../ourservices/superconsuling.html" class=""><i class="fas fa-angle-right me-2"></i> Super Counseling</a>
+                             <a href="../ourservices/Test Preparation.html" class=""><i class="fas fa-angle-right me-2"></i> Test Preparation</a>
+                              <a href="../ourservices/Documentation.html" class=""><i class="fas fa-angle-right me-2"></i> Documentation</a>
+                            <a href="../ourservices/Visa Processing.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Processing</a>
+                            <a href="../ourservices/Pre-Departure Briefing.html" class=""><i class="fas fa-angle-right me-2"></i> Pre-Departure Briefing</a>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+       <div class="container-fluid copyright py-3">
+    <div class="container text-center">
+        <span class="text-white">
+            <i class="fas fa-copyright me-2"></i>
+            2026 Varahi Overseas Consultant. All Rights Reserved.
+        </span>
+    </div>
+</div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+ <!-- Bootstrap JS (if you have) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom script -->
+    <script>
+    document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+        window.location.href = this.getAttribute('href');
+    });
+    </script>
+
+</body>
+</html>
+  
+</body>
+</html>
