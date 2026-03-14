@@ -1,0 +1,11 @@
+# robots.txt for Varahi Overseas Consultancy / Travisa
+# Replace https://www.yourdomain.com with your actual site URL
+
+User-agent: *
+Allow: /
+
+# Disallow login/admin pages from indexing (optional - remove if you want them indexed)
+Disallow: /loginpage.html
+
+# Sitemap location (required for search engines to discover your sitemap)
+Sitemap: https://www.yourdomain.com/sitemap.xml
