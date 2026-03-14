@@ -8,4 +8,4 @@ Allow: /
 Disallow: /loginpage.html
 
 # Sitemap location (required for search engines to discover your sitemap)
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://varahioverseas.com/sitemap.xml
