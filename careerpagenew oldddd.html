@@ -4,12 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="careers at Varahi, jobs, study abroad consultancy jobs, join our team">
+<meta name="description" content="Join Varahi Overseas Consultancy. Explore career opportunities in study abroad and visa consultancy. Build a meaningful career with us.">
+<link rel="canonical" href="https://www.yourdomain.com/careerpagenew.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.yourdomain.com/careerpagenew.html">
+<meta property="og:title" content="Careers | Varahi Overseas Consultancy">
+<meta property="og:description" content="Explore career opportunities in study abroad and visa consultancy. Join our team.">
+<meta property="og:image" content="https://www.yourdomain.com/img/varahi%20(3).png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Careers | Varahi Overseas Consultancy">
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<title>Careers Page</title>
+<title>Careers | Varahi Overseas Consultancy</title>
 
 <style>
 *{
@@ -1407,19 +1417,19 @@ cursor:pointer;
     
 <section class="career-form-section">
 
-<form id="resumeForm" enctype="multipart/form-data" class="job-form">
+<form class="job-form" id="jobForm">
 
 <label>First Name</label>
-<input type="text" name="firstname" required>
+<input type="text" placeholder="Enter First Name" required>
 
 <label>Last Name</label>
-<input type="text" name="lastname" required>
+<input type="text" placeholder="Enter Last Name" required>
 
 <label>Phone Number</label>
-<input type="tel" name="phone" required>
+<input type="tel" placeholder="Enter Phone Number" required>
 
 <label>Upload Resume</label>
-<input type="file" name="resume" required>
+<input type="file" required>
 
 <div class="form-buttons">
 <button type="submit" class="submit-btn">Submit</button>
@@ -1494,41 +1504,16 @@ cursor:pointer;
         </div>
         <!-- Copyright End -->
 <script>
-const resumeForm = document.getElementById("resumeForm");
+document.getElementById("jobForm").addEventListener("submit", function(e){
 
-if (resumeForm) {
-    resumeForm.addEventListener("submit", async function(e) {
-        e.preventDefault();
+e.preventDefault(); // stop page reload
 
-        const formData = new FormData(this);
+alert("Form Submitted Successfully!");
 
-        // ✅ Check file upload
-        if (!formData.get("resume") || formData.get("resume").size === 0) {
-            alert("Please upload resume ❗");
-            return;
-        }
+this.reset(); // clears all inputs including file upload
 
-        try {
-            const res = await fetch("https://travisa-backend.vercel.app/resume-form", {
-                method: "POST",
-                body: formData
-            });
-
-            const data = await res.json();
-
-            if (res.ok) {
-                alert("Resume Submitted Successfully ✅");
-                this.reset();
-            } else {
-                alert(data.message || "Error submitting resume ❌");
-            }
-
-        } catch (err) {
-            console.error("❌ Fetch Error:", err);
-            alert("Server not responding ❌");
-        }
-    });
-}
+});
 </script>
+
 </body>
 </html>
